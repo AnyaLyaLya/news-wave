@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# React News List Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a small React component that retrieves and displays a list of items from an API endpoint. Each item has a title and description. It supports pagination, error handling, and unit tests.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+- [Features](#features)
+  - [Pagination](#pagination)
+  - [Error Handling](#error-handling)
+  - [Unit Tests](#unit-tests)
+- [Bonus Points](#bonus-points)
+  - [Search Functionality](#search-functionality)
+  - [React Router](#react-router)
+  - [State Management](#state-management)
+- [API](#api)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository: `git clone https://github.com/your-username/react-news-list.git`
+2. Navigate to the project directory: `cd react-news-list`
+3. Install dependencies: `npm install`
 
-### `npm test`
+### Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Obtain your API key from [News API](https://newsapi.org/docs).
+2. Open `src/api.ts` and replace `'YOUR_API_KEY'` with your actual API key.
+3. Start the development server: `npm start`
+4. Open your browser and navigate to `http://localhost:3000`
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pagination
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The list of items is paginated to show 10 items per page initially. Clicking the "Load More" button fetches and appends more items to the list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Error Handling
 
-### `npm run eject`
+The component handles error cases gracefully. If the API is down or the response is malformed, appropriate error messages are displayed.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Unit Tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Unit tests are implemented using Jest and React Testing Library. Run tests using: `npm test`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Bonus Points
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Search Functionality
 
-## Learn More
+Search functionality is added to filter the list of items by title or description. Enter your search query in the input field to filter the results.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### React Router
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React Router is used to handle different routes and views. Additional routes and components can be added for extended functionality.
+
+### State Management
+
+The component uses Redux Toolkit for state management. Redux store is used to manage pagination, search, and error state.
+
+## API
+
+- Documentation: [News API](https://newsapi.org/docs)
+- Base URL: `https://newsapi.org/v2`

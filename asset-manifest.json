@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/news-wave/static/css/main.533215cb.css",
+    "main.js": "/news-wave/static/js/main.c08f2dda.js",
+    "index.html": "/news-wave/index.html",
+    "main.533215cb.css.map": "/news-wave/static/css/main.533215cb.css.map",
+    "main.c08f2dda.js.map": "/news-wave/static/js/main.c08f2dda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.533215cb.css",
+    "static/js/main.c08f2dda.js"
+  ]
+}

@@ -1,4 +1,4 @@
-# React News List Component
+# [React News List Component](https://AnyaLyaLya.github.io/news-wave)
 
 This is a small React component that retrieves and displays a list of items from an API endpoint. Each item has a title and description. It supports pagination, error handling, and unit tests.
 
@@ -10,7 +10,6 @@ This is a small React component that retrieves and displays a list of items from
 - [Features](#features)
   - [Pagination](#pagination)
   - [Error Handling](#error-handling)
-  - [Unit Tests](#unit-tests)
 - [Bonus Points](#bonus-points)
   - [Search Functionality](#search-functionality)
   - [React Router](#react-router)
@@ -42,10 +41,6 @@ The list of items is paginated to show 10 items per page initially. Clicking the
 
 The component handles error cases gracefully. If the API is down or the response is malformed, appropriate error messages are displayed.
 
-### Unit Tests
-
-Unit tests are implemented using Jest and React Testing Library. Run tests using: `npm test`
-
 ## Bonus Points
 
 ### Search Functionality
@@ -58,7 +53,7 @@ React Router is used to handle different routes and views. Additional routes and
 
 ### State Management
 
-The component uses Redux Toolkit for state management. Redux store is used to manage pagination, search, and error state.
+The component uses React Context for state management. Context store is used to manage pagination, search, and error state.
 
 ## API
 

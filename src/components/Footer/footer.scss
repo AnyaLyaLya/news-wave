@@ -1,0 +1,115 @@
+@import '../../styles/vars';
+@import '../../styles/mixins';
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+ul {
+  list-style: none;
+  
+  padding: 0;
+}
+
+.footer {
+  width: 100%;
+
+  color: $primary-color;
+
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px $primary-color;
+  padding: 20px;
+
+  @include onTablet {
+    padding: 24px;
+  }
+
+  @include onDesktop {
+    padding: 24px 36px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr;
+    gap: 20px;
+
+    list-style: none;
+
+    @include onTablet {
+      grid-template-rows: none;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+
+      &--title {
+        margin-bottom: 24px;
+
+        @include text(20px, 20px, $primary-color, 800);
+      }
+
+      &--subtitle {
+        @include text(16px, 16px, $secondary-color, 700);
+      }
+
+      &--text {
+        @include text(14px, 20px, $secondary-color);
+      }
+    }
+  }
+
+  &__contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-right: 75%;
+
+    @include onTablet {
+      grid-template-columns: 1fr;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+
+      justify-content: flex-start;
+
+      margin: 0 12px 12px 0;
+
+      &--link {
+        @include text(16px, 16px, $secondary-color);
+        width: 100px;
+      }
+    }
+  }
+
+  &__stack-list {
+    padding-right: 75%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+
+    @include onTablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}

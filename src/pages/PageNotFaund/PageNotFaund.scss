@@ -1,0 +1,59 @@
+@import '../../styles/mixins';
+@import '../../styles/vars';
+
+* {
+  box-sizing: border-box;
+}
+
+.containerPNF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+
+  @include size(100%, $height, url(https://source.unsplash.com/random?wallpapers));
+}
+
+.pageNotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 250px;
+  height: 250px;
+  background-color: #ffffff69;
+  border: 10px solid #fff;
+  padding: 10px;
+
+  @include onTablet {
+    width: 550px;
+    height: 450px;
+  }
+
+  &__title {
+    text-align: center;
+
+    @include text(32px, 32px, $primary-color, 800);
+
+    @include onTablet {
+      @include text(84px, 100px, $primary-color, 800);
+    }
+  }
+
+  &__subtitle {
+    @include text(16px, 16px, $primary-color, 400);
+
+    @include onTablet {
+      @include text(32px, 32px, $primary-color, 400);
+    }
+  }
+
+  &__link {
+    @include text(16px, 16px, $primary-color, 400);
+
+    @include onTablet {
+      @include text(32px, 32px, $primary-color, 400);
+    }
+  }
+}

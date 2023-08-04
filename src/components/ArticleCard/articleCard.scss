@@ -1,0 +1,43 @@
+@import '../../styles/mixins';
+
+.article-card {
+  background-color: #fff;
+  border: none;
+  
+  &__title {
+    @include text(14px, 16px,#111, 700);
+
+    @include onTablet {
+      @include text(16px, 18px,#111, 700);
+    }
+
+    @include onDesktop {
+      @include text(18px, 20px,#111, 700);
+    }
+  }
+
+  &__description {
+    text-align: justify;
+    margin: 24px 0;
+    text-indent: 4px;
+
+    @include text(12px, 14px,#111, 400);
+
+    @include onTablet {
+      @include text(14px, 16px,#111, 400);
+    }
+
+    @include onDesktop {
+      @include text(16px, 18px,#111, 400);
+    }
+
+    font-family: 'Lucida Sans Regular', sans-serif;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 4px;
+
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,109 @@
+@import '../../styles/mixins';
+
+.article {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include onTablet {
+     max-width: 700px;
+  }
+
+  @include onDesktop {
+    max-width: 1024px;
+  }
+
+  &__title {
+    @include text(20px, 24px, 700);
+
+    @include onTablet {
+      @include text(28px, 32px, 700);
+    }
+
+    @include onDesktop {
+      @include text(32px, 36px, 700);
+    }
+  }
+  
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-bottom: 20px; 
+
+    &--author {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  &__author {
+    margin: 0 0 0 12px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    margin-right: 20px;
+    text-align: justify;
+    text-indent: 8px;
+
+    @include text(16px, 16px, 400);
+
+    @include onMobile {
+      margin: 0 0 12px;
+    }
+
+    @include onTablet {
+      @include text(18px, 20px, 400);
+    }
+
+    @include onDesktop {
+      @include text(20px, 22px, 400);
+    }
+  }
+
+  &__image {
+    width: 50%;
+    height: fit-content;
+    border-radius: 4px;
+
+    @include onMobile {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: fit-content;
+    margin-top: 24px;
+    background-color: #111;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+
+    @include text(16px, 16px, #fff, 700);
+
+    &:hover {
+      background-color: #fff;
+      border-color: #111;
+      @include text(16px, 16px, #111, 700)
+    }
+  }
+}
